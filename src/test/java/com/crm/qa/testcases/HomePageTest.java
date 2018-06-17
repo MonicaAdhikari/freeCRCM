@@ -41,6 +41,7 @@ public class HomePageTest extends TestBase {
 		loginpage = new LoginPage();
 		//homepage object
 		homepage = loginpage.Login(prop.getProperty("username"), prop.getProperty("password"));
+		System.out.println("User is being Logged in");
 		impWait();
 	}
 	
@@ -54,6 +55,7 @@ public class HomePageTest extends TestBase {
 	
 	@Test(priority=2)
 	public void verifyHomePageUserNameTest() {
+		System.out.println("Trying to verify User Name on Home Page..... ");
 		testutil.switchToFrame();
 		impWait();
 		Assert.assertTrue(homepage.verifyHomePageUserName());
@@ -62,6 +64,7 @@ public class HomePageTest extends TestBase {
 
 	@Test(priority=3)
 	public void goToContactsTest() {
+		System.out.println("Trying to click Contacts link from Home Page..... ");
 		testutil.switchToFrame();
 		impWait();
 		contactpage = homepage.clickContactsLink();
@@ -71,6 +74,7 @@ public class HomePageTest extends TestBase {
 	
 	@Test(priority=4)
 	public void goToDealsTest() {
+		System.out.println("Trying to click Deals link from Home Page..... ");
 		testutil.switchToFrame();
 		impWait();
 		dealspage = homepage.clickDealsLink();
@@ -78,8 +82,9 @@ public class HomePageTest extends TestBase {
 		System.out.println("Deals link is being clicked");
 		}
 
-	@Test(priority = 5)
+	@Test(priority=5)
 	public void goToTasksTest() {
+		System.out.println("Trying to click Tasks link from Home Page..... ");
 		testutil.switchToFrame();
 		impWait();
 		taskspage = homepage.clickTasksLink();

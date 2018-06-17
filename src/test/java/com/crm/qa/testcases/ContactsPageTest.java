@@ -35,7 +35,7 @@ public class ContactsPageTest extends TestBase {
 		//homepage object
 		homepage = loginpage.Login(prop.getProperty("username"), prop.getProperty("password"));
 		impWait();
-		testutil.switchToFrame();
+		//testutil.switchToFrame();
 		contactpage = homepage.clickContactsLink();
 	}
 	

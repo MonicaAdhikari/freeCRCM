@@ -32,7 +32,7 @@ public class LoginPageTest extends TestBase {
 	public void loginPageTitleTest() {
 		String title = loginpage.validateLoginPageTitle();
 		Assert.assertEquals(title, expTitle);
-		System.out.println("Login page Tite is being verified");
+		System.out.println("Login page Title is being verified");
 	}
 
 	@Test(priority=2)
