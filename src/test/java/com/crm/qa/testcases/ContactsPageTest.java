@@ -1,5 +1,7 @@
 package com.crm.qa.testcases;
 
+import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.support.ui.Select;
 import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
@@ -37,6 +39,11 @@ public class ContactsPageTest extends TestBase {
 		impWait();
 		//testutil.switchToFrame();
 		contactpage = homepage.clickContactsLink();
+		
+		//Generate alert using Webdriver's java script executor interface
+		JavascriptExecutor javascript = (JavascriptExecutor) driver;
+		javascript.executeScript("alert('Contracts Page Test Case Execution Is started Now..');");
+
 	}
 	
 	@Test(priority=1)
@@ -76,6 +83,9 @@ public class ContactsPageTest extends TestBase {
 		contactpage.createNewContact(pTitle, pFirstName, pLastame, pCompany);		
 		System.out.println("New Contact are being created");
 		//Assert.assertEquals(actual, expected);
+		
+
+
 	}
 	
 	@AfterMethod

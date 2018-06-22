@@ -317,7 +317,7 @@ public class TestBase {
 	}
 
 	// calendar
-	public void testDAtePicker() throws Exception {
+	public void testDatePicker() throws Exception {
 
 		// Date and Time to be set in textbox
 		String dateTime = "12/07/2014 2:00 PM";

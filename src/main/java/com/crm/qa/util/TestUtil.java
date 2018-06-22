@@ -39,16 +39,15 @@ public class TestUtil extends TestBase {
 
 		try {
 			ipfile = new FileInputStream(TESTDATA_SHEET_PATH);
-
 			// Find the file extension by splitting file name in substring and getting only
 			// extension name
 			// fileExtensionName = fileName.substring(TESTDATA_SHEET_PATH.indexOf("."));
-
 		} catch (FileNotFoundException e) {
 			e.printStackTrace();
 		}
 
 		try {
+			//create object of XSSFWorkbook class
 			book = WorkbookFactory.create(ipfile);
 			/*
 			 * // Check condition if the file is xlsx file if
@@ -57,8 +56,7 @@ public class TestUtil extends TestBase {
 			 * XSSFWorkbook(inputStream); } // Check condition if the file is xls file else
 			 * if (fileExtensionName.equals(".xls")) { // If it is xls file then create
 			 * object of XSSFWorkbook class guru99Workbook = new HSSFWorkbook(inputStream);
-			 * }
-			 */
+			 * }		 */
 		} catch (InvalidFormatException e) {
 			e.printStackTrace();
 		} catch (IOException e) {
